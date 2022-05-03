@@ -7,4 +7,5 @@ def main():
     print(f"Output: {e.emojize(emo, language='alias')}")
 
 
-main()
+if __name__ == "__main__":
+    main()
