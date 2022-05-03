@@ -7,6 +7,9 @@ name = "pypi"
 check50 = "*"
 submit50 = "*"
 style50 = "*"
+emoji = "*"
+pyfiglet = "*"
+inflect = "*"
 
 [dev-packages]
 
