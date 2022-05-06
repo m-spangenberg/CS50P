@@ -1,24 +1,49 @@
+import sys
 import requests
 
-# let the user specify how many bitcoins with sys.argv
-# if the user's input cannot be converted to a float, enforce sys.exit
-# query https://api.coindesk.com/v1/bpi/currentprice.json for bitcoin prices
-# parse the json returned by requests -- print(f"${amount:,.4f}")
-# docs.python-requests.org/en/latest/user/quickstart/#make-a-request
-# docs.python-requests.org/en/latest/user/quickstart/#json-response-content
-# get the current price of bitcoin as a float from the returned json
-# output the cost of n bitcoins in USD to four decimal places using ',' as a thousands seperator
-# https://docs.python.org/3/library/string.html#formatspec
-
-# $ python bitcoin.py                                                             
-# Missing command-line argument                                                   
-# $ python bitcoin.py cat                                                         
-# Command-line argument is not a number                                           
-# $ python bitcoin.py 1                                                           
-# $38,761.0833    
+coindesk_api = 'https://api.coindesk.com/v1/bpi/currentprice.json'
 
 
-try:
-    pass
-except requests.RequestException:
-    pass
+def main():
+    """Let the user ask the price of Bitcoin using sys.argv"""
+    print(f"${coindesk(input_logic()):,.4f}")
+
+
+def input_logic():
+    """Check  that the user respects our rules for argv input"""
+    try:
+
+        if len(sys.argv) < 2:
+            print("Missing command-line argument")
+            sys.exit(1)
+        elif not float(sys.argv[1]):
+            print("Command-line argument is not a number")
+            sys.exit(1)
+        else:
+            return float(sys.argv[1])
+    
+    # If the argument is anything but a floatable number, let the user know
+    except(TypeError, ValueError):
+        print("Command-line argument is not a number")
+        sys.exit(1)
+
+
+def coindesk(amount):
+    """Sends a get requests to the Coindesk API and return
+    the value for the requested amount of Bitcoin"""
+    try:
+        response = requests.get(coindesk_api)
+        data = response.json()
+        value = data['bpi']['USD']['rate_float']
+        amountvalue = amount * value
+
+    # Let the user know when a request to the API cannot be made
+    except requests.RequestException:
+        print("Coinbase not available. Please try again in a few minutes.")
+        sys.exit()
+    
+    return amountvalue
+
+
+if __name__ == "__main__":
+    main()
