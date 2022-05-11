@@ -11,6 +11,7 @@ emoji = "*"
 pyfiglet = "*"
 inflect = "*"
 requests = "*"
+pytest = "*"
 
 [dev-packages]
 
