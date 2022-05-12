@@ -19,13 +19,13 @@ def main():
 def filetype_check(user_file):
     """Check the MIME type of the file"""
     if "." in user_file:
-        check = user_file.split('.', 1)
+        check = user_file.split(".", 1)
         if check[1] not in filetypes:
             return "application/octet-stream"
         else:
             return filetypes[check[1]]
     else:
         return "application/octet-stream"
-            
+
 
 main()

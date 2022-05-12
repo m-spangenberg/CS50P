@@ -9,13 +9,13 @@ def main():
                 if int(numerator) <= int(denominator) and int(denominator) != 0:
                     fuel_gauge = (int(numerator) / int(denominator)) * 100
                     if fuel_gauge >= 99:
-                        print('F')
+                        print("F")
                         break
                     elif fuel_gauge < 99 and fuel_gauge > 1:
                         print(f"{fuel_gauge:.0f}%")
                         break
                     else:
-                        print('E')
+                        print("E")
                         break
         # Here we catch those sneaky exceptions.
         except (ValueError, ZeroDivisionError):

@@ -20,7 +20,7 @@ def main():
         s = input("Input: ").strip()
         f.setFont(font=choice(available_fonts))
         print(f.renderText(s))
-    
+
     # In the case of correctly flagged parameters passed, do this.
     elif len(sys.argv) == 3:
         if str(sys.argv[1]) in ["-f", "--font"] and str(sys.argv[2]) in available_fonts:

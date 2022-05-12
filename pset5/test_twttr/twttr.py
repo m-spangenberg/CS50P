@@ -1,10 +1,10 @@
-vowels = ['a', 'e', 'i', 'o', 'u']
+vowels = ["a", "e", "i", "o", "u"]
 
 
 def main():
     """Smwhr vr th rnbw!"""
     word = str(input("Input: ").strip())
-    print(f'Output: {shorten(word)}')
+    print(f"Output: {shorten(word)}")
 
 
 def shorten(word):
@@ -14,7 +14,7 @@ def shorten(word):
     for letter in word:
         if letter.lower() not in vowels:
             new_string += letter
-    
+
     return new_string
 
 

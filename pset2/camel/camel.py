@@ -5,7 +5,7 @@ def main():
 
 
 def snekCase(input):
-    """"This function converts input to snake_case"""
+    """ "This function converts input to snake_case"""
     snek = ""
     for letter in input:
         if letter.isupper():

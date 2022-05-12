@@ -2,11 +2,7 @@ from random import randint
 
 
 # These are the values our levels represent
-levelguide = [
-    {1: [0, 9]},
-    {2: [10, 99]},
-    {3: [100, 999]}
-]
+levelguide = [{1: [0, 9]}, {2: [10, 99]}, {3: [100, 999]}]
 
 
 def main():
@@ -37,7 +33,7 @@ def main():
                     solved += 1
                     attempts = 0
                     break
-            
+
             # Catches user trying to enter words instead of numbers
             except ValueError:
                 print("EEE")

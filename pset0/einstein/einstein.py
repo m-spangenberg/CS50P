@@ -6,7 +6,7 @@ def main():
 
 def convert(mass):
     """Convert kilograms to joules"""
-    joules = mass * (300000000 ** 2)
+    joules = mass * (300000000**2)
     return joules
 
 

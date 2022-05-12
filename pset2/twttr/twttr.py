@@ -1,10 +1,10 @@
-vowels = ['a', 'e', 'i', 'o', 'u']
+vowels = ["a", "e", "i", "o", "u"]
 
 
 def main():
     """Ht th rd jck!"""
     full_text = input("Input: ").strip()
-    print(f'Output: {vwlrmvr(full_text)}')
+    print(f"Output: {vwlrmvr(full_text)}")
 
 
 def vwlrmvr(input):
@@ -13,7 +13,7 @@ def vwlrmvr(input):
     for letter in input:
         if letter.lower() not in vowels:
             new_string += letter
-    
+
     return new_string
 
 

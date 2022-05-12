@@ -6,7 +6,7 @@ def main():
 
 def value(greeting):
     """Check how much we owe the customer"""
-    
+
     if greeting.lower().startswith("hello"):
         return 0
     elif greeting.lower().startswith("h"):

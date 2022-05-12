@@ -7,12 +7,12 @@ def main():
 
 def dollars_to_float(d):
     """Convert dollars to float"""
-    return float(d.strip('$'))
+    return float(d.strip("$"))
 
 
 def percent_to_float(p):
     """Convert percentage to float"""
-    return float(p.strip('%')) / 100
+    return float(p.strip("%")) / 100
 
 
 main()

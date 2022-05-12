@@ -17,7 +17,7 @@ def convert(fraction):
     if "/" in fraction:
         x, y = fraction.split("/", 1)
     else:
-        raise UnboundLocalError('Not a valid fraction.')
+        raise UnboundLocalError("Not a valid fraction.")
 
     # Check that both X and Y are integers
     if x.isdigit() and y.isdigit():
@@ -26,9 +26,9 @@ def convert(fraction):
             percentage = (int(x) / int(y)) * 100
             return percentage
         else:
-            raise ZeroDivisionError('X is larger than Y')
+            raise ZeroDivisionError("X is larger than Y")
     else:
-        raise ValueError('Not an integer')
+        raise ValueError("Not an integer")
 
 
 def gauge(percentage):

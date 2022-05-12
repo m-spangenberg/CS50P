@@ -6,7 +6,7 @@ def main():
 
 def convert(user_input):
     """Convert emoticons into emojis"""
-    modified_input = user_input.replace(':(', '🙁').replace(':)', '🙂')
+    modified_input = user_input.replace(":(", "🙁").replace(":)", "🙂")
     return modified_input
 
 

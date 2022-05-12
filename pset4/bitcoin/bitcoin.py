@@ -1,7 +1,7 @@
 import sys
 import requests
 
-coindesk_api = 'https://api.coindesk.com/v1/bpi/currentprice.json'
+coindesk_api = "https://api.coindesk.com/v1/bpi/currentprice.json"
 
 
 def main():
@@ -21,9 +21,9 @@ def input_logic():
             sys.exit(1)
         else:
             return float(sys.argv[1])
-    
+
     # If the argument is anything but a floatable number, let the user know
-    except(TypeError, ValueError):
+    except (TypeError, ValueError):
         print("Command-line argument is not a number")
         sys.exit(1)
 
@@ -34,14 +34,14 @@ def coindesk(amount):
     try:
         response = requests.get(coindesk_api)
         data = response.json()
-        value = data['bpi']['USD']['rate_float']
+        value = data["bpi"]["USD"]["rate_float"]
         amountvalue = amount * value
 
     # Let the user know when a request to the API cannot be made
     except requests.RequestException:
         print("Coinbase not available. Please try again in a few minutes.")
         sys.exit()
-    
+
     return amountvalue
 
 

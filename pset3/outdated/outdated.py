@@ -10,7 +10,7 @@ months = [
     "September",
     "October",
     "November",
-    "December"
+    "December",
 ]
 
 
@@ -29,7 +29,7 @@ def main():
                     if month <= 12 and day <= 31:
                         print(f"{year}-{month:02}-{day:02}")
                         break
-            
+
             # if the userinput does not contain spaces, do this.
             else:
                 month, day, year = map(int, userinput.split("/"))
@@ -43,7 +43,7 @@ def main():
 
         # catch CTRL+D and CTRL+C then end the program
         except (EOFError, KeyboardInterrupt):
-            print('', end='\n')
+            print("", end="\n")
             quit()
 
         # Go back to the top of the loop

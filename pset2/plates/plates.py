@@ -1,8 +1,28 @@
-
 # “Numbers cannot be used in the middle of a plate; they must come at the end. For example, AAA222 would be an acceptable … vanity plate; AAA22A would not be acceptable. The first number used cannot be a ‘0’.”
 # “No periods, spaces, or punctuation marks are allowed.”
 
-illegal_symbols = [' ', '.', '?', '!', ',', ':', ';', '(', ')', '[', ']', '\'', '-', '\"', '/', '\\', '`', '@', '#', '*']
+illegal_symbols = [
+    " ",
+    ".",
+    "?",
+    "!",
+    ",",
+    ":",
+    ";",
+    "(",
+    ")",
+    "[",
+    "]",
+    "'",
+    "-",
+    '"',
+    "/",
+    "\\",
+    "`",
+    "@",
+    "#",
+    "*",
+]
 
 
 def main():
@@ -16,7 +36,7 @@ def main():
 
 def is_valid(s):
     """2cool4Skool"""
-    validated = ''
+    validated = ""
     numcheck = 0
 
     # Check the following rules to validate the input
@@ -24,7 +44,7 @@ def is_valid(s):
         if s[0].isalpha() and s[1].isalpha():
             for ch in s:
                 if ch not in illegal_symbols:
-                    if ch.isnumeric() and numcheck == 0 and ch != '0':
+                    if ch.isnumeric() and numcheck == 0 and ch != "0":
                         numcheck += 1
                         validated += ch
                     elif ch.isnumeric() and numcheck > 0:
@@ -35,7 +55,7 @@ def is_valid(s):
 
     # Let the caller know what's up
     if validated == s:
-        return True  
+        return True
     else:
         return False
 
