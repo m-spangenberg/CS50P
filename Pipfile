@@ -12,6 +12,7 @@ pyfiglet = "*"
 inflect = "*"
 requests = "*"
 pytest = "*"
+tabulate = "*"
 
 [dev-packages]
 
