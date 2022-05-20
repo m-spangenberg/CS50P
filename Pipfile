@@ -13,6 +13,7 @@ inflect = "*"
 requests = "*"
 pytest = "*"
 tabulate = "*"
+pillow = "*"
 
 [dev-packages]
 
