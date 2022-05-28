@@ -12,7 +12,7 @@ def convert(s):
     eg. 9:00 AM to 5:00 PM or 9 AM to 5 PM -> 09:00 to 17:00"""
 
     # Insensitively find all time strings using AM and PM
-    time = re.findall(r"^.*AM|[0-9].*PM", s, re.IGNORECASE)
+
     
 
 if __name__ == "__main__":
