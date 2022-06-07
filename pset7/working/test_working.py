@@ -49,7 +49,7 @@ def test_no_entry():
     """Check that convert raises ValueErrors when nothing is entered."""
     with pytest.raises(ValueError):
         convert("")
-    
+
 
 def test_invalid_format():
     """Check that convert raises ValueErrors when time values are poorly formatted."""

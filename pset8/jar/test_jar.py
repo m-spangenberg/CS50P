@@ -45,7 +45,7 @@ def test_size():
 def test_deposit():
     """Check if deposit adds the correct amount of cookies to the jar."""
     crunchy_cookie_jar = Jar(10)
-    crunchy_cookie_jar.deposit(4) 
+    crunchy_cookie_jar.deposit(4)
     assert crunchy_cookie_jar.size == 4
 
     double_fudge_brownies = Jar(12, 11)
