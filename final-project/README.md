@@ -1,0 +1,1 @@
+My final project for **CS50's Introduction to Programming with Python** exists in its own repository, and can be found at [qr-vcard-generator](https://github.com/m-spangenberg/qr-vcard-generator).
